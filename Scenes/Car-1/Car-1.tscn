@@ -1,0 +1,176 @@
+[gd_scene load_steps=28 format=3 uid="uid://chqk46eexaulh"]
+
+[ext_resource type="Texture2D" uid="uid://bj6wi83rct5oj" path="res://Assets/Low_poly_2D_Car_Sprite_Pack_update1.3/carDefault/carDefault_0007.png" id="1_fk7sw"]
+[ext_resource type="Script" uid="uid://cgsa5klx8olfd" path="res://Scenes/Car-1/car_1.gd" id="1_jv4cq"]
+[ext_resource type="Texture2D" uid="uid://bww1e2dh1r5q3" path="res://Assets/Low_poly_2D_Car_Sprite_Pack_update1.3/carDefault/carDefault_0008.png" id="2_jv4cq"]
+[ext_resource type="Texture2D" uid="uid://b8nwq3oqhla3y" path="res://Assets/Low_poly_2D_Car_Sprite_Pack_update1.3/carDefault/carDefault_0010.png" id="3_go0j1"]
+[ext_resource type="Texture2D" uid="uid://b3y3ort86ahmf" path="res://Assets/Low_poly_2D_Car_Sprite_Pack_update1.3/carDefault/carDefault_0011.png" id="4_76223"]
+[ext_resource type="Texture2D" uid="uid://cwx4pms3uo3xb" path="res://Assets/Low_poly_2D_Car_Sprite_Pack_update1.3/carDefault/carDefault_0004.png" id="5_88srp"]
+[ext_resource type="Texture2D" uid="uid://lp2861ara4ra" path="res://Assets/Low_poly_2D_Car_Sprite_Pack_update1.3/carDefault/carDefault_0001.png" id="6_k7v0u"]
+[ext_resource type="Texture2D" uid="uid://xjplf8ihor1x" path="res://Assets/Low_poly_2D_Car_Sprite_Pack_update1.3/carDefault/carDefault_0002.png" id="7_6sulm"]
+[ext_resource type="Texture2D" uid="uid://b6n735anti0d5" path="res://Assets/Low_poly_2D_Car_Sprite_Pack_update1.3/carDefault/carDefault_0005.png" id="8_aed05"]
+[ext_resource type="Texture2D" uid="uid://du3ocav3vqdxt" path="res://Assets/Low_poly_2D_Car_Sprite_Pack_update1.3/carDefault/carDefault_0000.png" id="9_vi652"]
+[ext_resource type="Texture2D" uid="uid://wnmrvt1fkk06" path="res://Assets/Low_poly_2D_Car_Sprite_Pack_update1.3/carDefault/carDefault_0009.png" id="10_v0ga8"]
+[ext_resource type="Texture2D" uid="uid://clbmkrt4lt5c0" path="res://Assets/Low_poly_2D_Car_Sprite_Pack_update1.3/carDefault/carDefault_0003.png" id="11_py7b5"]
+[ext_resource type="Texture2D" uid="uid://b6rmt7exwlpgw" path="res://Assets/Low_poly_2D_Car_Sprite_Pack_update1.3/carDefault/carDefault_0006.png" id="12_2h415"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_050y7"]
+atlas = ExtResource("1_fk7sw")
+region = Rect2(0, 0, 315, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g16lt"]
+atlas = ExtResource("2_jv4cq")
+region = Rect2(0, 0, 315, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3v23v"]
+atlas = ExtResource("3_go0j1")
+region = Rect2(0, 0, 315, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4u4h1"]
+atlas = ExtResource("4_76223")
+region = Rect2(0, 0, 315, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3db61"]
+atlas = ExtResource("5_88srp")
+region = Rect2(0, 0, 315, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r4cnl"]
+atlas = ExtResource("6_k7v0u")
+region = Rect2(0, 0, 315, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cj2v3"]
+atlas = ExtResource("7_6sulm")
+region = Rect2(0, 0, 315, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a7a4c"]
+atlas = ExtResource("8_aed05")
+region = Rect2(0, 0, 315, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ic5kk"]
+atlas = ExtResource("9_vi652")
+region = Rect2(0, 0, 315, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wnbu3"]
+atlas = ExtResource("10_v0ga8")
+region = Rect2(0, 0, 315, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cpgyh"]
+atlas = ExtResource("11_py7b5")
+region = Rect2(0, 0, 315, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ddp5a"]
+atlas = ExtResource("12_2h415")
+region = Rect2(0, 0, 315, 250)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_flwe5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_050y7")
+}],
+"loop": true,
+"name": &"120",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g16lt")
+}],
+"loop": true,
+"name": &"150",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3v23v")
+}],
+"loop": true,
+"name": &"210",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4u4h1")
+}],
+"loop": true,
+"name": &"240",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3db61")
+}],
+"loop": true,
+"name": &"30",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r4cnl")
+}],
+"loop": true,
+"name": &"300",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cj2v3")
+}],
+"loop": true,
+"name": &"330",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a7a4c")
+}],
+"loop": true,
+"name": &"60",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ic5kk")
+}],
+"loop": true,
+"name": &"down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wnbu3")
+}],
+"loop": true,
+"name": &"left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cpgyh")
+}],
+"loop": true,
+"name": &"right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ddp5a")
+}],
+"loop": true,
+"name": &"up",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fk7sw"]
+size = Vector2(64, 48)
+
+[node name="car-1" type="CharacterBody2D"]
+script = ExtResource("1_jv4cq")
+
+[node name="AnimatableBody2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_flwe5")
+animation = &"up"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_fk7sw")

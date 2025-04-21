@@ -1,7 +1,7 @@
-[gd_scene load_steps=28 format=3 uid="uid://chqk46eexaulh"]
+[gd_scene load_steps=30 format=3 uid="uid://chqk46eexaulh"]
 
 [ext_resource type="Texture2D" uid="uid://bj6wi83rct5oj" path="res://Assets/Low_poly_2D_Car_Sprite_Pack_update1.3/carDefault/carDefault_0007.png" id="1_fk7sw"]
-[ext_resource type="Script" uid="uid://cgsa5klx8olfd" path="res://Scenes/Car-1/car_1.gd" id="1_jv4cq"]
+[ext_resource type="Script" uid="uid://crssenbrklgyd" path="res://Scenes/Car-1/car_1.gd" id="1_jv4cq"]
 [ext_resource type="Texture2D" uid="uid://bww1e2dh1r5q3" path="res://Assets/Low_poly_2D_Car_Sprite_Pack_update1.3/carDefault/carDefault_0008.png" id="2_jv4cq"]
 [ext_resource type="Texture2D" uid="uid://b8nwq3oqhla3y" path="res://Assets/Low_poly_2D_Car_Sprite_Pack_update1.3/carDefault/carDefault_0010.png" id="3_go0j1"]
 [ext_resource type="Texture2D" uid="uid://b3y3ort86ahmf" path="res://Assets/Low_poly_2D_Car_Sprite_Pack_update1.3/carDefault/carDefault_0011.png" id="4_76223"]
@@ -13,6 +13,12 @@
 [ext_resource type="Texture2D" uid="uid://wnmrvt1fkk06" path="res://Assets/Low_poly_2D_Car_Sprite_Pack_update1.3/carDefault/carDefault_0009.png" id="10_v0ga8"]
 [ext_resource type="Texture2D" uid="uid://clbmkrt4lt5c0" path="res://Assets/Low_poly_2D_Car_Sprite_Pack_update1.3/carDefault/carDefault_0003.png" id="11_py7b5"]
 [ext_resource type="Texture2D" uid="uid://b6rmt7exwlpgw" path="res://Assets/Low_poly_2D_Car_Sprite_Pack_update1.3/carDefault/carDefault_0006.png" id="12_2h415"]
+
+[sub_resource type="Gradient" id="Gradient_jv4cq"]
+offsets = PackedFloat32Array(0, 0.573333, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0.253063, 0.102725, 0, 1, 0, 0, 0, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_76223"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_050y7"]
 atlas = ExtResource("1_fk7sw")
@@ -164,13 +170,35 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fk7sw"]
 size = Vector2(64, 48)
 
-[node name="car-1" type="CharacterBody2D"]
+[node name="car-1" type="CharacterBody2D" groups=["Car"]]
 script = ExtResource("1_jv4cq")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+lifetime = 0.5
+randomness = 1.0
+fixed_fps = 60
+emission_shape = 3
+emission_rect_extents = Vector2(1, 1)
+gravity = Vector2(0, 0)
+scale_amount_min = 5.0
+scale_amount_max = 6.95
+color_ramp = SubResource("Gradient_jv4cq")
 
 [node name="AnimatableBody2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
+material = SubResource("ShaderMaterial_76223")
+scale = Vector2(0.202333, 0.202333)
 sprite_frames = SubResource("SpriteFrames_flwe5")
-animation = &"up"
+animation = &"right"
+autoplay = "right"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(0.202333, 0.202333)
 shape = SubResource("RectangleShape2D_fk7sw")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(3, 3)
+
+[node name="dash_timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="dash_timer" to="." method="_on_dash_timer_timeout"]

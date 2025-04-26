@@ -2,7 +2,7 @@ extends Node2D
 
 @onready var _2 = $"Blocks/2"
 @onready var anim = $anim
-var L_1 = preload("res://Scenes/Levels/L_1/L_1.tscn")
+var L_1 = preload("res://Scenes/Levels/L_3/l_3.tscn")
 
 func _ready():
 	anim.play("st")
@@ -33,7 +33,7 @@ func _on_in_3_body_entered(body):
 		
 
 func _on_timer_timeout():
-	get_tree().change_scene_to_file("res://Scenes/Levels/L_1/L_1.tscn")
+	get_tree().change_scene_to_packed(L_1)
 
 
 func _on_death_body_entered(body):

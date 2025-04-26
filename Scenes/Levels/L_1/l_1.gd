@@ -2,7 +2,7 @@ extends Node2D
 
 @onready var anim = $anim
 @onready var _2 = $"Blocks/2"
-
+const NODE_2D = preload("res://FINAle/node_2d.tscn")
 var next_scene = preload("res://Scenes/Levels/l_2/l_2.tscn")
 
 func _ready():
@@ -34,7 +34,7 @@ func _input(event):
 
 func _on_timer_timeout():
 	pass # Replace with function body.
-	get_tree().change_scene_to_file("res://Scenes/Levels/l_2/l_2.tscn")
+	get_tree().change_scene_to_packed(next_scene)
 
 
 func _on_next_body_entered(body):
@@ -42,3 +42,13 @@ func _on_next_body_entered(body):
 		anim.play("en")
 		print('goinf to l2')
 		$Timer.start(1)
+
+
+func _on_won_body_entered(body):
+	if body.name == 'car-1':
+		anim.play("en (2)")
+		$won.start((3))
+
+func _on_won_timeout():
+	pass # Replace with function body.
+	get_tree().change_scene_to_packed(NODE_2D)

@@ -60,3 +60,7 @@ func _physics_process(delta):
 func _input(event):
 	if Input.is_action_just_pressed("dash"):
 		dashing = !dashing
+
+
+func _on_death_zone_body_entered(body):
+	pass # Replace with function body.

@@ -1,0 +1,89 @@
+[gd_scene load_steps=5 format=3 uid="uid://cnwj8m5unbprn"]
+
+[ext_resource type="AudioStream" uid="uid://cvhu6fggv3xxh" path="res://Assets/First Love - Sad & Emotional Piano Song Instrumental.mp3" id="1_ddiux"]
+
+[sub_resource type="Animation" id="Animation_jjbeo"]
+resource_name = "fdf"
+length = 15.0
+step = 1.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 15),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-481, 379), Vector2(-481, -877)]
+}
+
+[sub_resource type="Animation" id="Animation_ddiux"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-481, 379)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_i3mw7"]
+_data = {
+&"RESET": SubResource("Animation_ddiux"),
+&"fdf": SubResource("Animation_jjbeo")
+}
+
+[node name="Lost" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -7329.0
+offset_top = -6281.0
+offset_right = -7289.0
+offset_bottom = -6241.0
+scale = Vector2(427.15, 427.15)
+color = Color(0, 0, 0, 1)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Label" type="Label" parent="."]
+offset_left = -481.0
+offset_top = 379.0
+offset_right = 1953.0
+offset_bottom = 2616.0
+scale = Vector2(0.407942, 0.401685)
+theme_override_font_sizes/font_size = 100
+text = "He chased her,
+even after she chose someone else,
+because he thought love could rewrite a lost story.
+
+But he was already broken,
+and in running after her,
+he only ran from himself.
+
+He clung to the thorned rose too long—
+bled for a love that was never his.
+
+And in the end,
+he didn’t lose her.
+He lost himself.
+
+BAD ENDING."
+horizontal_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_i3mw7")
+}
+autoplay = "fdf"
+
+[node name="FirstLove-Sad&EmotionalPianoSongInstrumental" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(-2682, 977)
+stream = ExtResource("1_ddiux")
+autoplay = true

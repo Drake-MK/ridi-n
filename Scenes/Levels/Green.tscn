@@ -1,0 +1,69 @@
+[gd_scene load_steps=6 format=3 uid="uid://cwcqfhiu4vup6"]
+
+[sub_resource type="Gradient" id="Gradient_i74dy"]
+colors = PackedColorArray(0, 0.813865, 0.162893, 1, 1, 0.933333, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_4i2gw"]
+gradient = SubResource("Gradient_i74dy")
+
+[sub_resource type="Animation" id="Animation_4i2gw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -5)]
+}
+
+[sub_resource type="Animation" id="Animation_i74dy"]
+resource_name = "idle"
+loop_mode = 2
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, -5), Vector2(0, 0), Vector2(0, 5)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4i2gw"]
+_data = {
+&"RESET": SubResource("Animation_4i2gw"),
+&"idle": SubResource("Animation_i74dy")
+}
+
+[node name="Green" type="Node2D"]
+
+[node name="Green" type="Sprite2D" parent="."]
+position = Vector2(0, -5)
+rotation = 0.782643
+texture = SubResource("GradientTexture2D_4i2gw")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Green"]
+libraries = {
+&"": SubResource("AnimationLibrary_4i2gw")
+}
+autoplay = "idle"
+
+[node name="Green2" type="Sprite2D" parent="."]
+position = Vector2(0, -5)
+rotation = 0.782643
+texture = SubResource("GradientTexture2D_4i2gw")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Green2"]
+libraries = {
+&"": SubResource("AnimationLibrary_4i2gw")
+}
+autoplay = "idle"

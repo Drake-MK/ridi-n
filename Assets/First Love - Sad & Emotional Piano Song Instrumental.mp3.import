@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cvhu6fggv3xxh"
+path="res://.godot/imported/First Love - Sad & Emotional Piano Song Instrumental.mp3-e522122d46f3fb3974e957013589384f.mp3str"
+
+[deps]
+
+source_file="res://Assets/First Love - Sad & Emotional Piano Song Instrumental.mp3"
+dest_files=["res://.godot/imported/First Love - Sad & Emotional Piano Song Instrumental.mp3-e522122d46f3fb3974e957013589384f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
